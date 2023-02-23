@@ -1,0 +1,33 @@
+.gallery {
+  padding: 0 8%;
+  .gallery-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+    .gallery-item-3 {
+      grid-row: span 2;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+  .gallery-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+    .gallery-item-1 {
+      grid-row: span 2;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,277 @@
+.profile {
+  width: 90%;
+  margin: auto;
+  color: $ig-primary-text;
+  font-size: 1.6rem;
+  padding: 0 4%;
+  .profile-header {
+    .profile-header-top {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 40px;
+      .profile-avatar {
+        width: 180px;
+        height: 180px;
+        clip-path: circle(50%);
+        cursor: pointer;
+        margin: 0 80px;
+      }
+      .profile-info {
+        align-self: flex-start;
+        .profile-setting,
+        .profile-stat {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .profile-setting {
+          margin-bottom: 40px;
+          .profile-name {
+            margin-right: 24px;
+            font-weight: 500;
+            font-size: 2rem;
+          }
+          .setting-btn {
+            padding: 8px 16px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin-right: 20px;
+            border-radius: 8px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            background-color: $ig-secondary-button-background;
+            &:hover {
+              background-color: $ig-secondary-button-background-hover;
+            }
+          }
+          i {
+            font-size: 2.4rem;
+            cursor: pointer;
+          }
+        }
+        .profile-stat {
+          margin-bottom: 40px;
+          .follower-stat,
+          .following-stat {
+            cursor: pointer;
+            margin-left: 24px;
+          }
+          .number {
+            font-weight: 600;
+          }
+        }
+        .profile-description {
+          .profile-name {
+            font-weight: 600;
+            margin-bottom: 16px;
+          }
+          .profile-relate {
+            .username {
+              font-weight: 600;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .profile-stories {
+      padding: 16px 40px;
+      margin-bottom: 24px;
+      .story-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .story-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          margin-right: 60px;
+          .story-img {
+            width: 80px;
+            height: 80px;
+            clip-path: circle(50%);
+            cursor: pointer;
+          }
+          .story-description {
+            margin-top: 12px;
+            font-weight: 600;
+            font-size: 1.4rem;
+            max-width: 60px;
+            --max-line: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: var(--max-line);
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+          }
+        }
+      }
+    }
+  }
+  .profile-main {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    .profile-main-navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      .profile-main-navlink {
+        text-decoration: none;
+        color: #000;
+        border-top: 1px solid transparent;
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+        i {
+          margin-right: 8px;
+        }
+      }
+      .profile-main-navlink.active {
+        border-top: 1px solid #000;
+      }
+    }
+    .profile-main-content {
+      .post-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        .post-item {
+          aspect-ratio: 1/1;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+          }
+        }
+      }
+      .profile-collections {
+        //display: none;
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .add-collection-btn {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $ig-link;
+            cursor: pointer;
+            font-size: 1.6rem;
+            font-weight: 600;
+            &:hover {
+              color: $ig-primary-button-hover;
+            }
+            i {
+              margin-right: 4px;
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .profile-collection-list {
+          list-style: none;
+        }
+      }
+      .profile-tagged {
+        //display: none;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: flex-start;
+        text-align: center;
+        i {
+          font-size: 5rem;
+          padding: 12px;
+          border-radius: 50%;
+          border: 2px solid #000;
+          margin-bottom: 28px;
+        }
+        .profile-tagged-description {
+          .what-tagged {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+          }
+          .how-tagged {
+            font-size: 1.8rem;
+            opacity: 0.7;
+          }
+          .tagged-status {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.setting-profile-container {
+  background-color: #fff;
+  font-size: 1.6rem;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  .setting-option-list {
+    list-style: none;
+    .option-item {
+      min-width: 450px;
+      text-align: center;
+      padding: 16px 0;
+      transition: 0.3s;
+      cursor: pointer;
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      }
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+}
+.set-avt-container {
+  background-color: #fff;
+  font-size: 1.6rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  .set-avt-option-list {
+    list-style: none;
+    .option-item {
+      min-width: 450px;
+      text-align: center;
+      padding: 16px 0;
+      transition: 0.3s;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      }
+      &:not(:first-child):hover {
+        background-color: #ccc;
+        cursor: pointer;
+      }
+    }
+    .title {
+      font-size: 2rem;
+      padding: 24px;
+    }
+    .upload-avt {
+      font-weight: 600;
+      color: rgb(39, 39, 255);
+    }
+    .remove-avt {
+      font-weight: 600;
+      color: rgb(236, 52, 52);
+    }
+  }
+}

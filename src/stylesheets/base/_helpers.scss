@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.no-scroll {
+  overflow: hidden;
+  padding-right: 17px; // prevent re-flow element when scrollbar hide.
+}
+
+.custom-next-arrow {
+  position: absolute;
+  z-index: 10;
+  right: 14px;
+  &::before {
+    font-size: 28px;
+  }
+}
+.custom-prev-arrow {
+  position: absolute;
+  z-index: 10;
+  left: 6px;
+  &::before {
+    font-size: 28px;
+  }
+}
+.slick-disabled {
+  display: none;
+}
+.slick-dots {
+  li {
+    margin: 0;
+    width: 12px;
+    button::before {
+      font-size: 8px;
+    }
+  }
+}

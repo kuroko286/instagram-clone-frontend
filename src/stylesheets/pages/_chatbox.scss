@@ -1,0 +1,232 @@
+.inbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //height: 100vh;
+  //background-color: rgba(0, 0, 0, 0.1);
+  .inbox-container {
+    width: 80%;
+    height: 640px;
+    //height: 94vh;
+    display: flex;
+    border-radius: 12px;
+    border: 1px solid $ig-separator;
+    background-color: $ig-primary-color;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    .inbox-bar {
+      border-right: 1px solid $ig-separator;
+      width: $inboxbar-large-width;
+      .inbox-bar-top {
+        height: 60px;
+        padding: 0 12px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid $ig-separator;
+        .account {
+          flex: 1;
+          cursor: pointer;
+          font-size: 1.8rem;
+          padding: 4px 0;
+          text-align: center;
+          svg {
+            transform: rotate(180deg) translateY(-4px);
+          }
+        }
+        i {
+          margin-left: 12px;
+          font-size: 2.6rem;
+          cursor: pointer;
+        }
+      }
+      .inbox-bar-bottom {
+        margin-top: 12px;
+        .contact-list {
+          list-style: none;
+          .contact-item {
+            position: relative;
+            height: 80px;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.2s;
+            .user-avatar {
+              width: 50px;
+              height: 50px;
+              clip-path: circle(42%);
+              margin-right: 12px;
+            }
+
+            .circle {
+              bottom: 20px;
+              left: 50px;
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              border-radius: 50%;
+              border: 2px solid aqua;
+              background-color: greenyellow;
+            }
+
+            &:hover {
+              background-color: $ig-secondary-background;
+            }
+            .user-info {
+              font-size: 1.6rem;
+              .user-status {
+                opacity: 0.7;
+                span {
+                  margin-left: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .inbox-main {
+      width: calc(100% - $inboxbar-large-width);
+      .inbox-start {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        i {
+          font-size: 5rem;
+          padding: 32px;
+          border-radius: 50%;
+          border: 2px solid #000;
+          margin-bottom: 12px;
+        }
+        h3 {
+          font-weight: 600;
+          margin-bottom: 8px;
+        }
+        p {
+          opacity: 0.7;
+          margin-bottom: 16px;
+        }
+        .start-btn {
+          background-color: rgb(18, 49, 190);
+          padding: 8px 12px;
+          color: #fff;
+          border-radius: 4px;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            background-color: rgb(43, 43, 229);
+          }
+        }
+      }
+      .dialog-container {
+        .dialog-header {
+          padding: 0 24px;
+          height: 60px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid $ig-separator;
+          .user-info {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.6rem;
+            img {
+              width: 40px;
+              height: 40px;
+              clip-path: circle(42%);
+              cursor: pointer;
+            }
+            .info-text {
+              margin-left: 8px;
+              cursor: pointer;
+              &:hover {
+                opacity: 0.7;
+              }
+              .username {
+                color: #000;
+              }
+              .status {
+                color: rgba(0, 0, 0, 0.6);
+              }
+            }
+          }
+          .dialog-option {
+            i {
+              font-size: 2.6rem;
+              cursor: pointer;
+              padding: 8px;
+            }
+          }
+        }
+        .dialog-main {
+          .dialog-list {
+            height: calc(100vh - 240px);
+            overflow: auto;
+            list-style: none;
+            padding: 12px;
+            .dialog-part {
+              font-size: 1.6rem;
+              .time {
+                text-align: center;
+                opacity: 0.7;
+                margin: 8px 0;
+              }
+              .message-container {
+                display: grid;
+                .self-message,
+                .opposite-message {
+                  max-width: 40%;
+                  margin: 8px 0;
+                  white-space: pre-wrap;
+                  border-radius: 16px;
+                  padding: 8px;
+                  line-height: 2.2rem;
+                }
+                .self-message {
+                  background-color: #aaa;
+                  justify-self: right;
+                }
+                .opposite-message {
+                  background-color: #ddd;
+                  justify-self: left;
+                }
+              }
+            }
+          }
+          .dialog-bottom {
+            padding: 12px 16px;
+          }
+          .dialog-input {
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            height: 52px;
+            border: 1px solid $ig-separator;
+            border-radius: 28px;
+            i {
+              font-size: 2.8rem;
+              cursor: pointer;
+              margin-right: 12px;
+            }
+            input {
+              outline: none;
+              border: none;
+              flex: 1;
+              background-color: transparent;
+              font-size: 1.6rem;
+              line-height: 52px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

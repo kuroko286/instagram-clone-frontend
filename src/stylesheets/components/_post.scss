@@ -1,0 +1,272 @@
+.post-container {
+  width: 500px;
+  padding: 8px 0;
+  color: $ig-primary-text;
+  border-bottom: 2px solid $ig-separator;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+
+  .post-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    .post-user {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      .user-avatar {
+        width: 50px;
+        height: 50px;
+        clip-path: circle(42%);
+        margin-right: 4px;
+        cursor: pointer;
+      }
+      .user-name {
+        margin-right: 12px;
+        font-weight: bolder;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    .post-options {
+      i {
+        font-size: 2rem;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  .post-image {
+    width: 100%;
+    height: auto;
+    // margin-left: 3px;
+  }
+  .post-react {
+    margin-top: 24px;
+    //cursor: pointer;
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      padding: 8px;
+      margin-right: 8px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  .like-counter {
+    font-weight: bold;
+    margin-left: 8px;
+  }
+  .post-description {
+    padding: 8px;
+    .username {
+      float: left;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+    .text {
+      white-space: pre-line;
+    }
+  }
+  .comments-container {
+    padding: 8px;
+    .comments-list {
+      list-style: none;
+      .comment {
+        display: flex;
+        justify-content: space-between;
+        .comment-info {
+          .username {
+            float: left;
+            font-weight: bold;
+            margin-right: 12px;
+          }
+          .text {
+            white-space: pre-line;
+          }
+        }
+        i {
+          font-size: 1rem;
+          padding: 4px;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+    .show-all-cmt {
+      margin-top: 12px;
+      .show-all-cmt-link {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+      }
+    }
+  }
+  .add-comment {
+    padding: 8px;
+    input {
+      outline: none;
+      border: unset;
+      width: 100%;
+      padding: 8px 0;
+    }
+  }
+}
+.popup-post-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 90vh;
+  margin: auto;
+  background-color: #fff;
+  display: flex;
+  font-size: 1.6rem;
+  .post-image-slider {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    .slick-slider {
+      height: 100%;
+
+      .post-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .slick-dots {
+        position: absolute;
+        bottom: 4px;
+      }
+    }
+  }
+  .post-beside {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 24px;
+    .post-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 8px 0;
+      .post-user {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        .user-avatar {
+          width: 50px;
+          height: 50px;
+          clip-path: circle(42%);
+          margin-right: 4px;
+          cursor: pointer;
+        }
+        .user-name {
+          margin-right: 12px;
+          font-weight: bolder;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+      .post-options {
+        i {
+          margin-right: 20px;
+          font-size: 2rem;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+    .comments-container {
+      flex: 1;
+      padding: 8px;
+      overflow: auto;
+      .post-description {
+        padding: 8px;
+        .username {
+          float: left;
+          font-weight: bold;
+          margin-right: 12px;
+        }
+        .text {
+          white-space: pre-line;
+        }
+      }
+      .comments-list {
+        list-style: none;
+        .comment {
+          display: flex;
+          justify-content: space-between;
+          .comment-info {
+            .username {
+              float: left;
+              font-weight: bold;
+              margin-right: 12px;
+            }
+            .text {
+              white-space: pre-line;
+            }
+          }
+          i {
+            font-size: 1rem;
+            padding: 4px;
+            cursor: pointer;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+    .post-react {
+      margin-top: 24px;
+      //cursor: pointer;
+      font-size: 2.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i {
+        padding: 8px;
+        margin-right: 8px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    .like-counter {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+    .add-comment {
+      padding: 8px;
+      input {
+        outline: none;
+        border: unset;
+        border-bottom: 1px solid black;
+        width: 100%;
+        padding: 8px 0;
+      }
+    }
+  }
+}

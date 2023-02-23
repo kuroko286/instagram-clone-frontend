@@ -1,0 +1,9 @@
+.main {
+  margin-left: auto;
+  height: 100%;
+  min-height: 100vh;
+  width: calc(100% - $navbar-large-width);
+  color: $ig-primary-text;
+  padding-top: 40px;
+  background-color: $ig-primary-color;
+}

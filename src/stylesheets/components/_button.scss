@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn.follow {
+  @include customButton($ig-primary-button, #fff, $ig-primary-button-hover);
+}
+.btn.following {
+  @include customButton($ig-secondary-background, #000, #e1e1e1);
+}

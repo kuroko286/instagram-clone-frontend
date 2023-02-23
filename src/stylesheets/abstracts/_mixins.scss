@@ -1,0 +1,43 @@
+@mixin customIcon($fontSize, $scale) {
+  font-size: $fontSize;
+  transition: 0.3s;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  line-height: 50px;
+  text-align: center;
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin boxContainer {
+  position: absolute;
+  top: 0;
+  left: 74px;
+  z-index: -1;
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: 0.4s;
+  background-color: $ig-primary-color;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 18px 18px 0;
+}
+
+@mixin customButton($bgColor, $textColor, $hoverBgColor) {
+  background-color: $bgColor;
+  color: $textColor;
+  padding: 8px 12px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid $ig-separator;
+  transition: 0.4s;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    background-color: $hoverBgColor;
+  }
+}

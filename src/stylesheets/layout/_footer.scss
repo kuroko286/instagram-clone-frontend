@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  padding: 8px;
+  font-size: 1.3rem;
+  color: $ig-secondary-text;
+  margin-top: 60px;
+  .line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    a {
+      text-decoration: none;
+      color: $ig-secondary-text;
+      margin-right: 8px;
+    }
+    &:last-child {
+      .lang {
+        cursor: pointer;
+        margin-right: 12px;
+        span svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

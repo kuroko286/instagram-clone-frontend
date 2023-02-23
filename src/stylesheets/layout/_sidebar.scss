@@ -1,0 +1,118 @@
+.sidebar {
+  width: 420px;
+  color: $ig-primary-text;
+  font-size: 1.6rem;
+  .account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .avatar img {
+      width: 60px;
+      height: 60px;
+      clip-path: circle(42%);
+      cursor: pointer;
+    }
+    .info {
+      flex: 1;
+      margin-left: 8px;
+      .name1 {
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .name2 {
+        opacity: 0.6;
+      }
+    }
+    .exchange {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $ig-primary-button;
+      cursor: pointer;
+      &:hover {
+        color: $ig-link;
+      }
+    }
+  }
+  .suggest {
+    margin-top: 20px;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title-text {
+        font-weight: 600;
+        opacity: 0.6;
+      }
+      .title-link {
+        color: $ig-primary-text;
+        font-weight: 600;
+        font-size: 1.4rem;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    .people {
+      list-style: none;
+      margin-top: 12px;
+      .person {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .avatar img {
+          width: 50px;
+          height: 50px;
+          clip-path: circle(42%);
+          cursor: pointer;
+        }
+        .info {
+          flex: 1;
+          margin-left: 8px;
+          .username {
+            font-weight: 600;
+            cursor: pointer;
+          }
+          .linked {
+            opacity: 0.6;
+          }
+        }
+        .add {
+          color: $ig-primary-button;
+          font-size: 1.4rem;
+          font-weight: 600;
+          cursor: pointer;
+          &:hover {
+            color: $ig-link;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    margin-top: 30px;
+    width: 340px;
+    opacity: 0.6;
+    .link-list {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+
+      .link {
+        font-size: 1.4rem;
+        margin-right: 8px;
+        cursor: pointer;
+        margin-bottom: 4px;
+        font-weight: 500;
+        border-bottom: 1px solid transparent;
+        &:hover {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+}

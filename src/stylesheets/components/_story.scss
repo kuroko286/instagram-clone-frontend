@@ -1,0 +1,45 @@
+.story-container {
+  text-align: center;
+  text-decoration: none;
+  color: $ig-primary-text;
+  .story {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin: 4px 12px;
+    transition: 0.3s;
+    background: radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
+      radial-gradient(#fff 65%, transparent 0),
+      linear-gradient(to top right, orange, deeppink);
+    border-radius: 50%;
+    .story-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      clip-path: circle(44%);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  // .username {
+  //   --max-line: 1;
+  //   display: -webkit-box;
+  //   -webkit-line-clamp: var(--max-line);
+  //   overflow: hidden;
+  //   -webkit-box-orient: vertical;
+  // }
+  .story.seen {
+    background: radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
+      radial-gradient(#fff 65%, transparent 0),
+      linear-gradient(to top right, #888, #999);
+  }
+}
+.story-bar {
+  background-color: $ig-primary-color;
+  width: 500px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+}
